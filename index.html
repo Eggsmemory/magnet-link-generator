@@ -67,30 +67,28 @@ input[type=button]:hover {
 </style>
 </head>
 <body>
-<h1>BitTorrent Magnet Link Generator</h1>
-
-<p>Cobble together magnet URIs consisting of a BitTorrent info hash, filename and a few BitTorrent trackers.</p>
+<h1>一鍵生成磁力連結</h1>
 
 <fieldset>
-<label id="labelmagnetlink" for="magnetlink">Magnet Link</label>
+<label id="labelmagnetlink" for="magnetlink">生成磁鏈</label>
 <input type="text" id="magnetlink" value=""/>
 </fieldset>
 
 <input type="button" value="Deconstruct" title="fill input parameters for generating a new magnet link" onclick="deconstructMagnetLink()"/>
 
 <fieldset>
-<label for="hash">BitTorrent Info Hash</label>
+<label for="hash">Hash</label>
 <input type="text" id="hash" value=""/>
 
-<label for="name">Display Name</label>
+<label for="name">檔案名稱</label>
 <input type="text" id="name" value=""/>
 
-<label for="trackers">Trackers</label>
+<label for="trackers">加入Trackers</label>
 <textarea id="trackers">
 </textarea>
 <input type="checkbox" id="remembertrackers" checked />
-<label class="checkboxlabel" for="remembertrackers" title="new ones will be added at the end">Remember trackers</label>
-<p>You might find more public BitTorrent trackers in <a href="https://github.com/ngosang/trackerslist">ngosang's trackerlist</a>.</p>
+<label class="checkboxlabel" for="remembertrackers" title="new ones will be added at the end">記住Tracker</label>
+<p>你可以在這裡找到更多tracker<a href="https://github.com/ngosang/trackerslist">ngosang's trackerlist</a>.</p>
 </fieldset>
 
 <input type="button" value="Generate" title="generate the magnet link" onclick="generateMagnetLink()"/>
