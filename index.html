@@ -1,9 +1,8 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><title>Magnet Link Generator</title><style>* {	margin: 0;	padding: 0;} body {	width: 90%;	margin: 1em auto;	font: 100% sans-serif;} fieldset {	margin: 1em 0;	padding: 0 5em;	border: none;} label {	display: block;	margin: 1em 0 0;} label.checkboxlabel {	display: inline-block;	margin: auto;} input, textarea {	display: block;	width: 100%;	margin: .5em 0;	padding: 1em;	background-color: #eee;	border: 1px solid #ccc;	border-radius: 5px;	box-sizing: border-box;} textarea {	height: 10em;	resize: none;} input[type=checkbox] {	display: inline-block;	width: auto;	margin: auto;
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Magnet Link Generator</title>
+<title>一鍵生成磁力連結</title>
 <style>
 * {
 	margin: 0;
@@ -67,11 +66,11 @@ input[type=button]:hover {
 </style>
 </head>
 <body>
-<h1>一鍵生成磁力連結</h1>
+<h1>Magnet Link Generator</h1>
 
 <fieldset>
-<label id="labelmagnetlink" for="magnetlink">生成磁鏈結果</label>
-<input type="text" id="Magnet Link" value=""/>
+<label id="labelmagnetlink" for="magnetlink">Magnet Link</label>
+<input type="text" id="magnetlink" value=""/>
 </fieldset>
 
 <input type="button" value="Deconstruct" title="fill input parameters for generating a new magnet link" onclick="deconstructMagnetLink()"/>
@@ -80,10 +79,10 @@ input[type=button]:hover {
 <label for="hash">Hash</label>
 <input type="text" id="hash" value=""/>
 
-<label for="name">檔案名稱</label>
+<label for="name">名稱</label>
 <input type="text" id="name" value=""/>
 
-<label for="trackers">加入Trackers(記得要分行)</label>
+<label for="trackers">加入Trackers</label>
 <textarea id="trackers">
 http://tracker.opentrackr.org:1337/announce
 http://explodie.org:6969/announce
@@ -106,15 +105,16 @@ udp://bt1.archive.org:6969/announce
 udp://tracker.uw0.xyz:6969/announce
 udp://retracker.akado-ural.ru:80/announce
 udp://ipv4.tracker.harry.lu:80/announce
-udp://zephir.monocul.us:6969/announce</textarea>
-<input type="checkbox" id="remembertrackers" checked />
-<label class="checkboxlabel" for="remembertrackers" title="new ones will be added at the end">記住Tracker</label>
-<p>你可以在這裡找到更多tracker<a href="https://github.com/ngosang/trackerslist">ngosang's trackerlist</a>.</p>
+udp://zephir.monocul.us:6969/announce
+</textarea>
+<input type="checkbox" id="記住trackers" checked />
+<label class="checkboxlabel" for="remembertrackers" title="new ones will be added at the end">Remember trackers</label>
+<p>你可以在這裡找到更多Tracker <a href="https://github.com/ngosang/trackerslist">ngosang's trackerlist</a>.</p>
 </fieldset>
 
-<input type="button" value="生成磁鏈" title="generate the magnet link" onclick="generateMagnetLink()"/>
+<input type="button" value="Generate" title="生成磁鏈" onclick="generateMagnetLink()"/>
 
-<input type="button" value="清空" title="clear all inputs and outputs" onclick="clearInputsAndOutputs()"/>
+<input type="button" value="Clear" title="清空" onclick="clearInputsAndOutputs()"/>
 
 <script>
 function deconstructMagnetLink() {
