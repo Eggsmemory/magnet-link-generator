@@ -73,8 +73,6 @@ input[type=button]:hover {
 <input type="text" id="magnetlink" value=""/>
 </fieldset>
 
-<input type="button" value="Deconstruct" title="fill input parameters for generating a new magnet link" onclick="deconstructMagnetLink()"/>
-
 <fieldset>
 <label for="hash">Hash</label>
 <input type="text" id="hash" value=""/>
@@ -112,9 +110,9 @@ udp://zephir.monocul.us:6969/announce
 <p>你可以在這裡找到更多Tracker <a href="https://github.com/ngosang/trackerslist">ngosang's trackerlist</a>.</p>
 </fieldset>
 
-<input type="button" value="Generate" title="生成磁鏈" onclick="generateMagnetLink()"/>
+<input type="button" value="生成磁鏈" title="生成磁鏈" onclick="generateMagnetLink()"/>
 
-<input type="button" value="Clear" title="清空所有" onclick="clearInputsAndOutputs()"/>
+<input type="button" value="清空" title="清空" onclick="clearInputsAndOutputs()"/>
 
 <script>
 function deconstructMagnetLink() {
